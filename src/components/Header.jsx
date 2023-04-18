@@ -2,7 +2,7 @@ import { Box, Flex, useColorModeValue, Text} from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { debounce } from "../utilities/debounce";
-import Logo from "./Logos/Logo";
+import Logo from "./logos/Logo";
 
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
