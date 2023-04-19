@@ -1,7 +1,8 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Heading, Text, Flex } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import PageComponent from "../components/PageComponent";
 import Hero from "../components/Hero";
+import ServicePitch from "../components/ServicePitch";
 
 const MainView = () => {
   const { t } = useTranslation();
@@ -14,6 +15,9 @@ const MainView = () => {
           {t("mainView.heading")}
         </Heading>
         <Text>{t("mainView.pitch")}</Text>
+        <Flex direction={'row'}>
+          <ServicePitch target={'/legal'} header={t('legal.heading')} content={t('legal.subHeading')}/>
+        </Flex>
       </PageComponent>
     </>
   );

@@ -9,15 +9,13 @@ import {
 } from "@chakra-ui/react";
 
 const Hero = ({ heading, subHeading, image }) => {
-  const url = image || "https://hellars.se/wp-content/uploads/2021/11/4.jpg"
+  const url = image || "https://hellars.se/wp-content/uploads/2021/11/4.jpg";
   return (
     <Flex
       mt={"110px"}
       w={"full"}
       h={"80vh"}
-      backgroundImage={
-        `url(${url})`
-      }
+      backgroundImage={`url(${url})`}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
@@ -28,7 +26,11 @@ const Hero = ({ heading, subHeading, image }) => {
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
-          <Heading as={"h1"} fontSize={"4xl"} color={"white !important"}>
+          <Heading
+            as={"h1"}
+            fontSize={"4xl"}
+            color={"white !important;"}
+          >
             {heading}
           </Heading>
           <Heading
