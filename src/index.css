@@ -13,7 +13,7 @@ h6 {
   color: #3c3b3b !important;
 }
 
-p {
+p, a {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 400;
   letter-spacing: 1px !important;
