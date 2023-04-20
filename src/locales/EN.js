@@ -4,7 +4,8 @@ export const EN = {
       services: "Services",
       company: "Company",
       team: "Team",
-      followUs: "Social media"
+      followUs: "Social media",
+      support: "Support"
     },
     pitch: {
       heading: "A Selection of Our Services",

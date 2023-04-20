@@ -63,7 +63,7 @@ const Footer = () => {
             <ListHeader>{t("uiElements.company")}</ListHeader>
             <Link href={"#"}>About</Link>
             <Link href={"#"}>Partners</Link>
-            <Link href={"#"}>Team</Link>
+            <Link href={"#"}>{t("uiElements.team")}</Link>
             <Link href={"#"}>Careers</Link>
             <Link href={"#"}>Contact</Link>
           </Stack>
@@ -71,9 +71,7 @@ const Footer = () => {
             <ListHeader>{t("uiElements.team")}</ListHeader>
             <Link href={"#"}>Help Center</Link>
             <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Legal</Link>
             <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Status</Link>
           </Stack>
         </SimpleGrid>
       </Container>
