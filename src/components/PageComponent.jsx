@@ -6,7 +6,7 @@ const PageComponent = ({ children }) => {
   return (
     <>
       <Header />
-      <Container minH={"100vh"} maxW={"7xl"} mt={"120px"}>
+      <Container minH={"100vh"} maxW={"7xl"} mt={"50px"}>
         {children}
       </Container>
       <Footer />

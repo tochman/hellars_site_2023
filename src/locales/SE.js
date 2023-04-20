@@ -1,5 +1,15 @@
 export const SE = {
   translation: {
+    uiElements: {
+      services: "Tjänster",
+      company: "Företaget",
+      team: "Teamet",
+      followUs: "Sociala media"
+    },
+    pitch: {
+      heading: "Ett Urval Av Våra Tjänster",
+      subHeading: "Vi har bred kompetens inom flertalet områden, bland annat:"
+    },
     mainView: {
       heading: "Hellars Affärsbyrå",
       subHeading:
