@@ -1,7 +1,7 @@
 describe("Application", () => {
 
   beforeEach(() => {
-    // cy.viewport('iphone-x')
+    cy.viewport('iphone-x')
   });
 
   context.only('- landing page', () => {

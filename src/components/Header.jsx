@@ -1,13 +1,15 @@
-import { Box, Flex, useColorModeValue, Text} from "@chakra-ui/react";
+import { Box, Hide, Container, Stack, Link } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { debounce } from "../utilities/debounce";
 import Logo from "./logos/Logo";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const navbarStyles = {
     width: "100%",
@@ -45,28 +47,37 @@ const Header = () => {
     <Box
       style={{
         ...navbarStyles,
-        top: visible ? "0" : "-110px",
+        top: visible ? "0" : "-140px",
       }}
       py={2}
       data-cy="header"
     >
-      <Flex
+      <Container
+        as={Stack}
+        maxW={"6xl"}
+        py={4}
+        spacing={4}
+        justify={"center"}
         align={"center"}
-        _before={{
-          content: '""',
-          borderColor: useColorModeValue("gray.200", "gray.700"),
-          flexGrow: 1,
-          mr: 8,
-        }}
-        _after={{
-          content: '""',
-          borderColor: useColorModeValue("gray.200", "gray.700"),
-          flexGrow: 1,
-          ml: 8,
-        }}
       >
         <Logo onClick={() => navigate("/")} style={{ cursor: "pointer" }} />
-      </Flex>
+        <Hide below="md">
+          <Stack direction={"row"} spacing={6} paddingTop={"30px"}>
+            <Link alignSelf={"center"} href={"/legal"}>
+              {t("legal.heading")}
+            </Link>
+            <Link alignSelf={"center"} href={"/accounting"}>
+              {t("accounting.heading")}
+            </Link>
+            <Link alignSelf={"center"} href={"/management"}>
+              {t("management.heading")}
+            </Link>
+            <Link alignSelf={"center"} href={"/digital"}>
+              {t("digital.heading")}
+            </Link>
+          </Stack>
+        </Hide>
+      </Container>
     </Box>
   );
 };

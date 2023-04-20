@@ -21,7 +21,7 @@ const ListHeader = ({ children }) => {
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <Box bg={"gray.50"} color={"gray.700"}>
+    <Box bg={"#FAF6F3"} color={"gray.700"}>
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
           templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr" }}
